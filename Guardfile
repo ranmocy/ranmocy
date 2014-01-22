@@ -1,5 +1,5 @@
 guard :shell, :all_on_start => true do
-  watch(/^(cv.*)\.(png|tex)$/) do |m|
+  watch("CV.tex") do |m|
     name = m[1]
 
     print "Building #{name}..."
