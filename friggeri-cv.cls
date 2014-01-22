@@ -19,13 +19,13 @@
 
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{AAAAAA}
 
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
+\definecolor{green}{HTML}{5DAE61}
+\definecolor{orange}{HTML}{FF7141}
 \definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{red}{HTML}{DD4C39}
+\definecolor{blue}{HTML}{5397D5}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -40,7 +40,7 @@
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
 \fi
-\colorlet{textcolor}{gray}
+\colorlet{textcolor}{darkgray}
 \colorlet{headercolor}{gray}
 
 %%%%%%%%%
@@ -52,10 +52,13 @@
 
 \newfontfamily\bodyfont[]{Helvetica Neue}
 \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+% \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\newfontfamily\headingfont[]{Fontin Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+% \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue
+% Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Times New Roman}
 
 %\setmathfont{XITS Math}
 
@@ -98,10 +101,10 @@
   {%
     \color{%
       \ifcase\value{colorCounter}%
-        blue\or%
+        green\or%
         red\or%
         orange\or%
-        green\or%
+        blue\or%
         purple\or%
         brown\else%
         headercolor\fi%
@@ -116,7 +119,7 @@
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{.5\parskip}
 }
 
 \renewcommand{\subsection}[2]{
