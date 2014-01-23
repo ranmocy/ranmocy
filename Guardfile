@@ -1,6 +1,6 @@
 guard :shell, :all_on_start => true do
-  watch(/^(CV)\.tex$/) do |m|
-    name = m[1]
+  watch(/^(CV\.tex|friggeri\-cv\.cls)$/) do |m|
+    name = "CV"
 
     print "Building #{name}..."
     n "Building #{name}...", 'LaTeX', :default

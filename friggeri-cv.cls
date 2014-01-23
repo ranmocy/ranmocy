@@ -28,17 +28,17 @@
 \definecolor{blue}{HTML}{5397D5}
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{brown}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+\colorlet{green}{gray}
+\colorlet{orange}{gray}
+\colorlet{purple}{gray}
+\colorlet{brown}{gray}
+\colorlet{red}{gray}
+\colorlet{blue}{gray}
+\colorlet{fillheader}{white}
+\colorlet{header}{gray}
 \else
-  \colorlet{fillheader}{gray}
-  \colorlet{header}{white}
+\colorlet{fillheader}{gray}
+\colorlet{header}{white}
 \fi
 \colorlet{textcolor}{darkgray}
 \colorlet{headercolor}{gray}
@@ -60,7 +60,7 @@
 % Light}
 \setmainfont[Mapping=tex-text, Color=textcolor]{Times New Roman}
 
-%\setmathfont{XITS Math}
+% \setmathfont{XITS Math}
 
 %%%%%%%%%%
 % Header %
@@ -101,13 +101,13 @@
   {%
     \color{%
       \ifcase\value{colorCounter}%
-        green\or%
-        red\or%
-        orange\or%
-        blue\or%
-        purple\or%
-        brown\else%
-        headercolor\fi%
+      green\or%
+      red\or%
+      orange\or%
+      blue\or%
+      purple\or%
+      brown\else%
+      headercolor\fi%
     } #1#2#3%
   }%
   \stepcounter{colorCounter}%
@@ -138,7 +138,7 @@
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-}{%
+  }{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
@@ -155,22 +155,25 @@
 % Side block %
 %%%%%%%%%%%%%%
 
+\RequirePackage{setspace}
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
+    \vspace{1.5\baselineskip}
+    \renewcommand\baselinestretch{1.2}\selectfont %change the lineheight
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor}
       ##1}
     \vspace{.5\baselineskip}
   }
   \begin{textblock}{3.6}(1.5, 4.33)
-  \begin{flushright}
-  \obeycr
-}{%
-  \restorecr
-  \end{flushright}
+    \begin{flushright}
+      \obeycr
+    }{%
+      \restorecr
+    \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
@@ -288,8 +291,8 @@
   \small\addfontfeature{Color=lightgray}%
   \ifblank{#3}{}{#3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
+  {\addcomma\space}
+  {}%
 }
 
 \newcommand{\printbibsection}[2]{
