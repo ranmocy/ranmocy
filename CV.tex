@@ -3,7 +3,7 @@
 % this template for printing
 \begin{document}
 
-\header{Wanzhang}{Sheng}{Developer} % Your name and current job title/field
+\header{Wanzhang}{Sheng}{Architect}
 
 % ----------------------------------------------------------------------------------------
 % SIDEBAR SECTION
@@ -11,29 +11,24 @@
 
 \begin{aside} % In the aside, each new line forces a line break
   \section{Summary}
-  a lava shadow as I
+  A lava shadow as I
   A black elf
   with bright eyes
-  Hacker,
-  Designer,
-  Philosopher
   \section{Contact}
   Mobile:
   +1 (415) 741--7785
-  Google Voice:
-  +1 (415) 967--2580
   ~
   \href{https://twitter.com/ranmocy}{@ranmocy}
   \href{https://facebook.com/ranmocy}{fb://ranmocy}
   \href{https://github.com/ranmocy}{github://ranmocy}
-  \href{http://www.linkedin.com/in/ranmocy}{linkedin://ranmocy}
-  \href{http://ranmocy.info}{http://ranmocy.info}
-  \href{mailto:ranmocy@gmail.com}{ranmocy@gmail.com}
+  \href{https://www.linkedin.com/in/ranmocy}{linkedin://ranmocy}
+  \href{https://ranmocy.me}{https://ranmocy.me}
+  \href{mailto:ranmocy+cv@gmail.com}{ranmocy@gmail.com}
   \section{Languages}
   Chinese, English
-  {\color{red} $\varheartsuit$} Ruby \& RoR
+  Java \& Android {\color{red} $\varheartsuit$}
+  Ruby \& RoR
   JavaScript
-  HTML5 \& CSS3
   Python
   LaTeX, C
   \section{Interests}
@@ -41,6 +36,86 @@
   Design, Hacking
   Piano, Guitar
 \end{aside}
+
+% ----------------------------------------------------------------------------------------
+% WORK EXPERIENCE SECTION
+% ----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{entrylist}
+  % ------------------------------------------------
+  \entry{2015 --- Now}
+  {Google \emph{--- Software Engineer}}
+  {Mountain View, CA}
+  {
+    A primary developer of kid side supervision and kid setup flow of FamilyLink app.
+    FamilyLink provides kids supervision to parents.
+    \url{http://g.co/familylink}.
+    \begin{itemize}
+      \item Developed bedtime feature on kid side, which is one of the top features of entire user story.
+      Tracking screen usage time. Multi-phase state calculations.
+      Enforce kids to stay in one Activity, which is a very tricky one.
+      Highly relay on special Android lifecycles and system hidden APIs.
+      \item Developed kids supervision features like app blacklist, app version enforcement, app permissions management, call/SMS tracking, system settings management, ring device, etc.
+      \item Refined kids setup flow to help parent setup kids device.
+      Developed Activity/Fragment flow controllers to easily define screen flows.
+      Migrated Activity based multi-screen implementation to Fragment based.
+      Refactored a lot code.
+      \item Introduced Dagger2 to kids supervision stack. Split supervision codebase into smaller libraries.
+      Help enforce system health requirement to supervision stack.
+      \item Rewrote full kids supervision stack into Google Play Services.
+      Restructured code. Designed database schema. Implemented supervision policy processing framework.
+      Implemented background jobs scheduling and retrying.
+      Established coding/testing design pattern.
+      Setup logging for debuggability.
+      \item First user adopted Room in Google for production code.
+    \end{itemize}
+  }
+  % ------------------------------------------------
+  \entry{2014 Summer}
+  {Twitter Ads \emph{--- Software Engineer Intern}}
+  {San Francisco, CA}
+  {
+    Full stack with Ruby on Rails, Backbone.js, and HTML/CSS.\@
+    \begin{itemize}
+      \item Tweet Preview: Send promoted tweet previews to advertisers. Finished work with back-end people.
+      \item Performance tools setup and speed optimization: Speed up Campaign Form page by 7.03\% in P99.
+      \item Refactored, clean up dead code and fix bugs.
+    \end{itemize}
+  }
+  % ------------------------------------------------
+  \entry{2012 --- 2013}
+  {GitCafe \emph{--- Full-stack Developer and System Administrator}}
+  {Shanghai, China}
+  {
+    Full stack with Ruby on Rails, keep components in edge and maintain the system.\@
+    \begin{itemize}
+    \item Refactored the Git hosting services to improve robustness
+    \item Add support of Git operations via HTTPS
+    \item Add support of Wiki for projects hosting on GitCafe
+    \item Add support of Pages hosting with custom domains
+    \item Add support of Pull Request system for collaboration
+    \item Design the internal API for Git and accounting service
+    \item Reduce the response time by using workers in background
+    \item Setup monitor system for all components with God and Monit
+    \item Improve the internal workflow with Guard, Zeus and Git
+    \end{itemize}
+  }
+  % ------------------------------------------------
+  \entry{2011 --- 2012}
+  {GitCafe \emph{--- Intern}}
+  {Shanghai, China}
+  {
+    Main achievements:
+    \begin{itemize}
+    \item Locale detector for Ruby on Rails
+    \item Internationalization (I18N) for English and Chinese
+    \item Allow user to change password or email address
+    \end{itemize}
+  }
+  % ------------------------------------------------
+\end{entrylist}
 
 % ----------------------------------------------------------------------------------------
 % EDUCATION SECTION
@@ -67,59 +142,6 @@
 \end{entrylist}
 
 % ----------------------------------------------------------------------------------------
-% WORK EXPERIENCE SECTION
-% ----------------------------------------------------------------------------------------
-
-\section{Experience}
-
-\begin{entrylist}
-  % ------------------------------------------------
-  \entry{2014 Summer}
-  {Twitter Ads \emph{--- Software Engineer - Intern}}
-  {San Francisco, USA}
-  {
-    Full stack with Ruby on Rails, Backbone.js, and HTML/CSS.
-    \begin{itemize}
-      \item Tweet Preview: Send promoted tweet previews to advertisers. Finished work with back-end people.
-      \item Performance tools setup and speed optimization: Speed up Campaign Form page by 7.03\% in P99.
-      \item Refactors, clean up dead code and fix bugs.
-    \end{itemize}
-  }
-  % ------------------------------------------------
-  \entry{2012 --- 2013}
-  {GitCafe \emph{--- Full-stack Developer and System Administrator}}
-  {Shanghai, China}
-  {
-    Full stack with Ruby on Rails, keep components in edge and maintain the system.
-    \begin{itemize}
-    \item Maintainer of Guard-Rails gem
-    \item Refactory the Git hosting services to improve robustness
-    \item Add support of Git operations via HTTPS
-    \item Add support of Wiki for projects hosting on GitCafe
-    \item Add support of Pages hosting with custom domains
-    \item Add support of Pull Request system for collaboration
-    \item Design the internal API for Git and accounting service
-    \item Reduce the response time by using workers in background
-    \item Setup monitor system for all components with God and Monit
-    \item Improve the internal workflow with Guard, Zeus and Git
-    \end{itemize}
-  }
-  % ------------------------------------------------
-  \entry{2011 --- 2012}
-  {GitCafe \emph{--- Intern}}
-  {Shanghai, China}
-  {
-    Main achievements:
-    \begin{itemize}
-    \item Locale detector for Ruby on Rails
-    \item Finish the internationalization (i18n) for Chinese
-    \item Add change password or email function
-    \end{itemize}
-  }
-  % ------------------------------------------------
-\end{entrylist}
-
-% ----------------------------------------------------------------------------------------
 % TOY SECTION
 % ----------------------------------------------------------------------------------------
 
@@ -128,33 +150,58 @@
 \begin{entrylist}
   % ------------------------------------------------
   \entry{rCaltrain}
-  {A caltrain scheduler.}
-  {JavaScript/Swift}
+  {A Caltrain scheduler}
+  {JavaScript/Java/Swift}
   {
-  Web: \url{http://rcaltrain.com}\\
-  iOS: \url{https://itunes.apple.com/us/app/rcaltrain/id933651977}\\
-  Source: \url{https://github.com/ranmocy/rCaltrain}
+    Web: \url{https://rcaltrain.com}\\
+    Android: \href{https://play.google.com/store/apps/details?id=me.ranmocy.rcaltrain}{\texttt{market://details?id=me.ranmocy.rcaltrain}}\\
+    Source: \url{https://github.com/ranmocy/rCaltrain}
   }
   % ------------------------------------------------
-  \entry{rComplete}
-  {JavaScript auto-complete, simple and beautiful.}
+  \entry{Monkey Tree}
+  {Fix phonetic names for Chinese contacts for sorting}
+  {Java/Android}
+  {
+    A 4.93/5 app. Users love it.\\
+    Android: \href{https://play.google.com/store/apps/details?id=me.ranmocy.monkeytree}{\texttt{market://details?id=me.ranmocy.monkeytree}}\\
+    Source: \url{https://github.com/ranmocy/MonkeyTree}
+  }
+  % ------------------------------------------------
+  \entry{Coolol}
+  {A Twitter client. A web app.}
   {JavaScript}
   {
-  Maintainer: \url{https://github.com/ranmocy/rComplete}
+    Web: \url{https://coolol.me}\\
+    Source: \url{https://github.com/ranmocy/Coolol}
+  }
+  % ------------------------------------------------
+  \entry{Web-Stub}
+  {Generates JSDoc and JavaScript stub from WebIDL}
+  {JavaScript}
+  {
+    For IDE auto-completion and type checking.\\
+    Source: \url{https://github.com/ranmocy/web-stub}
+  }
+  % ------------------------------------------------
+  \entry{SparkDriverLess}
+  {A driver-less version of mini Spark}
+  {Python}
+  {
+    Source: \url{https://github.com/ranmocy/SparkDriverLess}
   }
   % ------------------------------------------------
   \entry{Guard-Rails}
-  {Watch on your Rails and restart it as needed with Guard.}
+  {Watch on your Rails and restart it as needed with Guard}
   {Ruby}
   {
-  Maintainer: \url{https://github.com/ranmocy/guard-rails}
+    Maintainer: \url{https://github.com/ranmocy/guard-rails}
   }
   % ------------------------------------------------
   \entry{SmallestBlogger}
-  {A templated blogger generator with 200 lines of ruby code.}
+  {A templated blogger generator with 200 lines of ruby code}
   {Ruby}
   {
-  Maintainer: \url{https://github.com/ranmocy/smallest-blogger}
+    Maintainer: \url{https://github.com/ranmocy/smallest-blogger}
   }
   % ------------------------------------------------
 \end{entrylist}
