@@ -1,4 +1,5 @@
-\ProvidesClass{friggeri-cv}[2017/11/07 CV class]
+% Forked from https://github.com/akanosora/friggeri-cv
+\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -8,40 +9,39 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-
 %%%%%%%%%%
 % Colors %
 %%%%%%%%%%
 
 \RequirePackage{xcolor}
 
-\definecolor{white}{RGB}{255,255,255}
-
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
+\definecolor{silver}{HTML}{808080}
 \definecolor{lightgray}{HTML}{AAAAAA}
+\definecolor{white}{HTML}{FFFFFF}
 
 \definecolor{green}{HTML}{5DAE61}
 \definecolor{orange}{HTML}{FF7141}
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{DD4C39}
 \definecolor{blue}{HTML}{5397D5}
+\definecolor{wine}{HTML}{A2033c}
 
 \ifdefined\@cv@print
-\colorlet{green}{gray}
-\colorlet{orange}{gray}
-\colorlet{purple}{gray}
-\colorlet{brown}{gray}
-\colorlet{red}{gray}
-\colorlet{blue}{gray}
-\colorlet{fillheader}{white}
-\colorlet{header}{gray}
+  \colorlet{green}{darkgray}
+  \colorlet{orange}{darkgray}
+  \colorlet{purple}{darkgray}
+  \colorlet{red}{darkgray}
+  \colorlet{blue}{darkgray}
+  \colorlet{filltitle}{white}
+  \colorlet{title}{darkgray}
 \else
-\colorlet{fillheader}{gray}
-\colorlet{header}{white}
+  \colorlet{filltitle}{darkgray}
+  \colorlet{title}{white}
 \fi
 \colorlet{textcolor}{darkgray}
-\colorlet{headercolor}{gray}
+\colorlet{headercolor}{darkgray}
 
 %%%%%%%%%
 % Fonts %
@@ -49,17 +49,15 @@
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage{unicode-math}
-
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-% \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-\newfontfamily\headingfont[]{Fontin Bold}
-
 \defaultfontfeatures{Mapping=tex-text}
-% \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue
-% Light}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Times New Roman}
 
+\newfontfamily\firstnamefont{Helvetica Neue}
+\newfontfamily\lastnamefont{Helvetica Neue UltraLight}
+\newfontfamily\rolefont{Helvetica Neue Light}
+\newfontfamily\headingfont{Fontin Bold}
+
+\setmainfont[Color=textcolor, Numbers=OldStyle]{Times New Roman}
+\setmonofont[ItalicFont=GaramondPremrPro-It, BoldFont=GaramondPremrPro-Smbd]{GaramondPremrPro}
 % \setmathfont{XITS Math}
 
 %%%%%%%%%%
@@ -68,28 +66,21 @@
 
 \RequirePackage{tikz}
 
-\newcommand{\rolefont}{%
-  \fontsize{14pt}{24pt}\selectfont%
-  \thinfont%
-  \color{white}%
-}
-
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [rectangle, fill=filltitle, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
+      \fontsize{24pt}{36pt}\color{title}\scshape%
+      {\firstnamefont #1}~{\lastnamefont #2}%
     };
     \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
+      \fontsize{14pt}{24pt}\color{title}%
+      \rolefont #3%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
   \vspace{-2\parskip}
 }
-
 
 %%%%%%%%%%%%%
 % Structure %
@@ -101,13 +92,12 @@
   {%
     \color{%
       \ifcase\value{colorCounter}%
-      green\or%
-      red\or%
-      orange\or%
-      blue\or%
-      purple\or%
-      brown\else%
-      headercolor\fi%
+        green\or%
+        red\or%
+        orange\or%
+        blue\or%
+        purple\else%
+        headercolor\fi%
     } #1#2#3%
   }%
   \stepcounter{colorCounter}%
@@ -119,7 +109,7 @@
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{.5\parskip}
+  \par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[2]{
@@ -130,6 +120,8 @@
 
 \pagestyle{empty}
 
+% \RequirePackage{enumitem}
+% \setitemize{noitemsep, leftmargin=\parindent, labelindent=\parindent}
 
 %%%%%%%%%%%%%%%%%%%%
 % List environment %
@@ -138,7 +130,7 @@
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
-  }{%
+}{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
@@ -150,12 +142,10 @@
     #4\vspace{\parsep}%
   }\\}
 
-
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
 
-\RequirePackage{setspace}
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
@@ -164,16 +154,15 @@
   \renewcommand{\section}[1]{
     \vspace{1.5\baselineskip}
     \renewcommand\baselinestretch{1.2}\selectfont %change the lineheight
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor}
-      ##1}
+    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
     \vspace{.5\baselineskip}
   }
   \begin{textblock}{3.6}(1.5, 4.33)
-    \begin{flushright}
-      \obeycr
-    }{%
-      \restorecr
-    \end{flushright}
+  \begin{flushright}
+  \obeycr
+}{%
+  \restorecr
+  \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
@@ -182,7 +171,24 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=numeric, defernumbers=true, maxnames=99, backend=biber]{biblatex}
+\setlength\bibhang{0pt}
+
+\defbibenvironment{bibliography}{%
+  \list
+    {\printfield[labelnumberwidth]{labelnumber}}
+    {%
+      \setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{-\labelwidth}% <- Changed
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}%
+    }%
+  \renewcommand*{\makelabel}[1]{\hss##1}%
+}
+{\endlist}
+{\item}
 
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[book]{title}{#1\par}
@@ -190,9 +196,11 @@
 \DeclareFieldFormat[misc]{title}{#1\par}
 \DeclareFieldFormat[report]{title}{#1\par}
 
+\def\newblock{\hskip 0pt plus 0pt minus 0pt}
+
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
-  \newblock%
+  \nopagebreak\newblock%
   \printnames{author}%
   \par%
   \newblock%
@@ -204,15 +212,16 @@
     \newunit%
     \printlist{publisher}%
     \setunit*{\addcomma\space}%
-    \printfield{year}%
+    \textcolor{lightgray}{\printfield{doi}}%
     \newunit%
+    \finentry%
   }
   \par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{book}{%
   \printfield{title}%
-  \newblock%
+  \nopagebreak\newblock%
   \printnames{author}%
   \par%
   \newblock%
@@ -226,14 +235,14 @@
     \setunit{\addcomma\space}%
     \printlist{location}%
     \newunit%
+    \finentry%
   }
   \par\vspace{0.3\baselineskip}
 }
 
-
 \DeclareBibliographyDriver{inproceedings}{%
   \printfield{title}%
-  \newblock%
+  \nopagebreak\newblock%
   \printnames{author}%
   \par%
   \newblock%
@@ -245,13 +254,14 @@
     \setunit{\addcomma\space}%
     \printlist{location}%
     \newunit%
+    \finentry%
   }
   \par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{misc}{%
   \printfield{title}%
-  \newblock%
+  \nopagebreak\newblock%
   \printnames{author}%
   \par%
   \newblock%
@@ -265,13 +275,14 @@
     \setunit{\addcomma\space}%
     \printlist{location}%
     \newunit%
+    \finentry%
   }
   \par\vspace{0.3\baselineskip}
 }
 
 \DeclareBibliographyDriver{report}{%
   \printfield{title}%
-  \newblock%
+  \nopagebreak\newblock%
   \printnames{author}%
   \par%
   \newblock%
@@ -283,47 +294,40 @@
     \setunit{\addcomma\space}%
     \printfield{year}%
     \newunit%
+    \finentry%
   }
   \par\vspace{0.3\baselineskip}
 }
 
-\@ifpackageloaded{biblatex_legacy}
-  {
-    \DeclareNameFormat{author}{%
-      \small\addfontfeature{Color=lightgray}%
-      \ifblank{#3}{}{#3\space}#1%
-      \ifthenelse{\value{listcount}<\value{liststop}}
-      {\addcomma\space}
-      {}%
-    }
-  }
-  {
-    \DeclareNameFormat{author}{%
-      \small\addfontfeature{Color=lightgray}%
-      \nameparts{#1}%
-      \ifthenelse{\value{listcount}<\value{liststop}}
-      {\addcomma\space}
-      {}%
-    }
-  }
+% biblatex name formatting changed with version 3.3.
+% After this change the line "\ifblank{#3}{}{#3\space}#1%" gives an error.
+% See also: http://tex.stackexchange.com/questions/327316/updating-friggeris-cv-making-it-work-with-texlive-2015-and-up-too-many-erro
+
+\DeclareNameFormat{author}{%
+  \small\addfontfeature{Color=lightgray}%
+  \nameparts{#1}\ifblank{\namepartgiven}{}{\namepartgiven\space}\namepartfamily%
+  \ifthenelse{\value{listcount}<\value{liststop}}
+    {\addcomma\space}
+    {}%
+}
 
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
+    \newrefcontext[sorting=chronological]
+    \printbibliography[type={#1}, title={#2}, heading=subbibliography]
   \end{refsection}
 }
 
-\DeclareSortingScheme{chronological}{
+\DeclareSortingTemplate{chronological}{
   \sort[direction=descending]{\field{year}}
   \sort[direction=descending]{\field{month}}
 }
-
-
 
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[left=6.1cm, top=2cm, right=1.5cm, bottom=2.5cm, nohead, nofoot]{geometry}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{microtype}
