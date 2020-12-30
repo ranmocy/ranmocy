@@ -58,7 +58,7 @@
 
 \newfontfamily\firstnamefont{Helvetica Neue}
 \newfontfamily\lastnamefont{Helvetica Neue UltraLight}
-\newfontfamily\rolefont{Helvetica Neue Light}
+\newfontfamily\rolefont{HelveticaNeue Light}
 \newfontfamily\headingfont{Fontin Bold}
 
 \setmainfont[Color=textcolor, Numbers=OldStyle]{Times New Roman}

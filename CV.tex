@@ -44,26 +44,36 @@
 \begin{entrylist}
   % ------------------------------------------------
   \entry{2015 --- Now}
-  {Google \emph{--- Software Engineer}}
-  {Mountain View, CA}
+  {Google \emph{--- Senior Software Engineer}}
+  {Mountain View, CA / Austin, TX}
   {
-    A primary developer and latter the tech lead of parental supervision on kids' Android devices which serves millions of active supervised Andorid devices.
-    This is part of FamilyLink project which provides parental supervision of Google account in general.
-    \url{http://g.co/familylink}.
+    A primary developer and latter the tech lead of parental supervision on kids' Android devices.
+    It serves millions of actively supervised Android devices.
+    It's part of the FamilyLink project, which provides parental supervision of Google account in general.
+    See \url{http://g.co/familylink}.
     \begin{itemize}
       \item Led a team of four for parental supervision features on Android devices.
       Maintained team priority and coordinate cross-team projects.
       Coached other team members to work inside the stack and support new supervision features on Android devices.
       \item Rewrote full kids supervision stack into Google Play Services.
       Established coding/testing design pattern.
-      \item Defined APK release process that met Google Play Services requirements while kept our team independent.
+      Developed core supervision features including TimeLimit (locks down the device with a custom screen),
+      screen time usage limit, app management, version enforcement, permissions management, system settings management, find the device, etc.
+      Maintained features to keep them up-to-date in a continually evolving environment.
+      \item Defined APK release process that met Google Play Services requirements while kept flexibility.
       Setup logging and metrics pipeline.
       Added metrics covering all critical features allowing A/B testing.
       Defined experiments ramping policies and processes, and set up enforcements.
-      \item Developed core supervision features including TimeLimit which locks down the device with custom screen, screen time usage limit, app blacklist, version enforcement, permissions management, system settings management, find the device, etc. Maintained features to keep them up-to-date in a constantly evolving enviroment.
       \item Keep adopting new tools/frameworks/libraries to improve code quality,
       including Android Arch Component and Google Play Services new technologies.
-      Worked with EngProd team to improve and enforce code and system health.
+      Work with the EngProd team to improve and maintain code and system health.
+    \end{itemize}
+    A project owner in Google Play Services which runs on 2B+ Android devices.
+    \begin{itemize}
+      \item Refactored Android Activity virtualization code to reduce long-term maintainence to work with new version of AndroidX.
+      It affects all 100+ modules in Google Play Services.
+      Using code generation to provide better maintainability.
+      \item Work with multiple team across PAs to enable Kotlin in Google Play Services safely.
     \end{itemize}
   }
   % ------------------------------------------------
@@ -79,30 +89,20 @@
     \end{itemize}
   }
   % ------------------------------------------------
-  \entry{2012 --- 2013}
+  \entry{2011 --- 2013}
   {GitCafe \emph{--- Full-stack Developer and System Administrator}}
   {Shanghai, China}
   {
     Full stack with Ruby on Rails, keep components in edge and maintain the system.\@
     \begin{itemize}
     \item Refactored the Git hosting services to improve robustness
-    \item Add support of Git operations via HTTPS, Wiki for projects hosting, Pages hosting with custom domains, Pull Request system for collaboration
+    \item Implemented support of Git operations via HTTPS, Wiki for projects hosting,
+    Pages hosting with custom domains, Pull Request system for collaboration,
+    locale detection, internationalization (I18N), account management, etc.
     \item Design the internal API for Git and accounting service
     \item Reduce the response time by using workers in background
     \item Setup monitor system for all components with God and Monit
     \item Improve the internal workflow with Guard, Zeus and Git
-    \end{itemize}
-  }
-  % ------------------------------------------------
-  \entry{2011 --- 2012}
-  {GitCafe \emph{--- Intern}}
-  {Shanghai, China}
-  {
-    Main achievements:
-    \begin{itemize}
-    \item Locale detector for Ruby on Rails
-    \item Internationalization (I18N) for English and Chinese
-    \item Allow user to change password or email address
     \end{itemize}
   }
   % ------------------------------------------------
@@ -152,16 +152,15 @@
   {A Caltrain scheduler}
   {JavaScript/Android/iOS}
   {
-    Web: \url{https://rcaltrain.com}\\
+    Web: \url{https://github.com/ranmocy/rCaltrain}\\
     Android: \href{https://play.google.com/store/apps/details?id=me.ranmocy.rcaltrain}{\texttt{market://details?id=me.ranmocy.rcaltrain}}\\
-    Source: \url{https://github.com/ranmocy/rCaltrain}
   }
   % ------------------------------------------------
   \entry{Monkey Tree}
   {Fix phonetic names for Chinese contacts for sorting}
   {Java/Android}
   {
-    A 4.93/5 stars app on PlayStore. Users love it.\\
+    A 4.7/5 stars app on PlayStore. Users love it.\\
     Android: \href{https://play.google.com/store/apps/details?id=me.ranmocy.monkeytree}{\texttt{market://details?id=me.ranmocy.monkeytree}}\\
     Source: \url{https://github.com/ranmocy/MonkeyTree}
   }
@@ -170,7 +169,6 @@
   {A Twitter client. A web app.}
   {JavaScript}
   {
-    Web: \url{https://coolol.me}\\
     Source: \url{https://github.com/ranmocy/Coolol}
   }
   % ------------------------------------------------
