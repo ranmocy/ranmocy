@@ -15,6 +15,7 @@ OSX:
 ```bash
 brew install texlive entr
 echo "CV.tex" | entr bash -c 'xelatex -halt-on-error CV.tex && open CV.pdf'
+convert -colorspace sRGB -alpha opaque -density 600 -resize 25% CV.pdf CV.png && open CV-0.png
 ```
 
 Linux:

@@ -48,6 +48,8 @@
 \colorlet{textcolor}{darkgray}
 \colorlet{headercolor}{darkgray}
 
+\pagecolor{white}
+
 %%%%%%%%%
 % Fonts %
 %%%%%%%%%
