@@ -13,8 +13,8 @@ git clone https://github.com/ranmocy/fonts.git ~/.fonts
 OSX:
 
 ```bash
-brew install texlive
-xelatex -halt-on-error CV.tex
+brew install texlive entr
+echo "CV.tex" | entr bash -c 'xelatex -halt-on-error CV.tex && open CV.pdf'
 ```
 
 Linux:
