@@ -1,5 +1,5 @@
 # About
-This is my resume, templated by Adrien Friggeri.
+This is my resume, templated forked from Adrien Friggeri.
 
 ## Fonts
 
