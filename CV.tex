@@ -1,6 +1,5 @@
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the
-% square bracket to remove colors from
-% this template for printing
+% Add 'print' as an option in the square bracket to remove colors from this template for printing
+\documentclass[]{friggeri-cv}
 \begin{document}
 
 \header{Mocy}{Sheng}{Software Designer}
@@ -44,29 +43,31 @@
 
 \begin{entrylist}
   % ------------------------------------------------
-  \entry{2022 --- Now}
+  \entry{2024 --- Now}
+  {Apple \emph{--- Senior Software Engineer}}
+  {Sunnyvale, CA}
+  {
+    Apple Vision Pro Services team provides cloud and ML services that support new visionOS features.
+  }
+  % ------------------------------------------------
+  \entry{2022 --- 2024}
   {Narya.ai \emph{--- Head of Engineering / Founding Engineer}}
   {Palo Alto, CA}
   {
-    Narya AI is a no-code smart contract security and testing platform.
+    Narya AI is a no-code platform for testing and securing EVM-based smart contracts,
+    fully supporting the Solidity programming language.
 
-    Lead a team of five, including full-stack engineers, ML engineers, and designers.
-    Coordinate with the entire team to define the product and the roadmap.
+    Owned the entire product, including software, machine learning, product, and UI, and led a team of five.
+    Launched the product from scratch to production.
 
-    The platform allows users to test EVM-based smart contract interaction flows without writing code.
-
-    Key features:
     \begin{itemize}
-      \item Full Solidity expression support to interact with any deployed or local smart contracts.
-      \item Our Rust-based in-house proprietary fuzzing engine could detect bugs automatically.
-      It supports both fuzzing tests and property tests, along with the traditional unit tests.
-      It runs faster and finds more bugs than popular competitors like Foundry or Echidna.
-      \item LLM-based suggestion to quickly create interaction flow with ease.
-      \item For NFT projects, it could generate a complete set of tests to cover all significant parts of an NFT smart contract.
-      Developers could define all tests in 10-30 minutes.
+      \item Developed a proprietary Rust-based fuzzing engine to find smart contract bugs,
+      which traditionally is reviewed manually by smart contract auditors.
+      Our engine runs faster and finds more bugs than popular competitors like Foundry or Echidna.
+      \item LLM-based code generation to quickly create interaction flow.
+      \item For NFT projects, it can generate a complete set of tests within 10-30 minutes,
+      down from days of engineer's work.
     \end{itemize}
-
-    See \url{https://narya.ai/}.
   }
   % ------------------------------------------------
   \entry{2015 --- 2022}
@@ -75,34 +76,35 @@
   {
     Owner of large-scale projects in Google Play Services,
     which runs on 2B+ Android devices and has 100+ module teams contributing to it.
+
     \begin{itemize}
-      \item Reworked Android components virtualization code with code generation.
-      This effort reduced long-term maintenance for all 100+ module teams
-      by allowing them to leverage the latest version of AndroidX without worrying about breaking changes.
-      \item Led and coordinate between multiple teams across different PAs to safely enable Kotlin in Google Play Services.
+      \item Reworked Android components virtualization with code generation.
+      Reduced long-term maintenance for all 100+ module teams by allowing them to
+      use the latest AndroidX with backward compatibility with the container app.
+      \item Led and coordinated multiple teams across different PAs to
+      safely enable Kotlin for all teams contributing to the app.
     \end{itemize}
-    Tech lead of parental supervision on kids' Android devices. It serves millions of actively supervised Android devices.
-    It's part of the Family Link project, which provides parental supervision features of Google accounts.
+
+    Family Link provides parental supervision for Google accounts,
+    serving millions of actively supervised Android devices.
     See \url{http://g.co/familylink}.
+
+    Led a team of four and was responsible for all features on kids' Android devices.
+
     \begin{itemize}
-      \item Led a team of four engineers.
-      Point of contact for all supervision features on kids' devices.
-      Prioritize for the team and coordinate all device supervision projects cross-team.
-      Maintained features to keep them up-to-date in a continually evolving environment.
-      \item Led the full rewrite of the kid's supervision stack into Google Play Services.
-      Established coding/testing design pattern.
-      Coached other team members to work inside the stack and support new supervision features on Android devices.
-      \item Defined APK release process that met Google Play Services requirements while keeping flexibility for the team.
-      Set up logging and metrics pipeline.
-      Added metrics covering all critical features, allowing A/B testing.
-      Defined experiments ramping policies and processes, and set up enforcements.
-      \item Kept adopting new tools/frameworks/libraries to improve code quality,
-      including Android Arch Component and Google Play Services new mechanisms.
-      Worked with the EngProd team to improve and maintain code and system health.
+      % Complex work
+      \item Reworked the rule-based Time Limit feature, the most critical and complex feature,
+      which reduced 90\% of user complaints.
+      % Reliablity
+      \item Developed a policy-based framework to improve reliability.
+      Defined all logging and metrics,
+      enabling A/B testing and quick debugging for all feature and APK releases.
+      % Release
+      \item Defined APK and feature release processes and policies with automated enforcement.
+      Maintained compatibility for the app to run on all OS and the container app released in the past 10 years.
+      \item Organized regular tech talks among large teams on how to work in the stack.
     \end{itemize}
   }
-  \end{entrylist}
-  \begin{entrylist}
   % ------------------------------------------------
   \entry{2014 Summer}
   {Twitter Ads \emph{--- Software Engineer Intern}}
@@ -112,7 +114,6 @@
     \begin{itemize}
       \item Tweet Preview: Send promoted tweet previews to advertisers.
       \item Performance profiling and speed up Campaign Form page by 7.03\% in P99.
-      \item Refactored, clean up dead code and fix bugs.
     \end{itemize}
   }
   % ------------------------------------------------
@@ -120,11 +121,11 @@
   {GitCafe \emph{--- Full-stack Developer and System Administrator}}
   {Shanghai, China}
   {
-    Full stack with Ruby on Rails, keep components on edge, and maintain the system.
+    Full stack with Ruby on Rails.
     \begin{itemize}
-    \item Design and implement support of Git over HTTPS, Wiki, Pages hosting with custom domains,
-    Pull Request system, Git hosting service, account/billing management, etc.
-    \item Reduce the response time, improve robustness, and set up a monitor system for all components.
+      \item Designed and implemented the main Git hosting service, including Git servers, Wiki, Pages,
+      Pull Requests, notifications, and account/billing management.
+      \item Designed and implemented metrics system and optimized page loading time.
     \end{itemize}
   }
   % ------------------------------------------------

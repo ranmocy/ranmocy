@@ -15,7 +15,7 @@ OSX:
 ```bash
 brew install basictex imagemagick entr
 sudo tlmgr install textpos biblatex
-echo "CV.tex" | entr bash -c 'xelatex -halt-on-error CV.tex && open CV.pdf'
+ls -1 CV.tex *.cls | entr bash -c 'xelatex -halt-on-error CV.tex && open CV.pdf'
 magick convert -colorspace sRGB -alpha opaque -density 600 -resize 50% CV.pdf CV.png && open CV-0.png
 ```
 
