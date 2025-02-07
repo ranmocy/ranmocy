@@ -1,5 +1,11 @@
+%; /usr/bin/env xelatex -output-directory=.build -halt-on-error $0 && cp .build/*.pdf ./; exit
+
 % Add 'print' as an option in the square bracket to remove colors from this template for printing
 \documentclass[]{friggeri-cv}
+
+% Reduce hyphens for better copy-paste and machine document scanning
+\hyphenpenalty=1000
+
 \begin{document}
 
 \header{Mocy}{Sheng}{Software Designer}

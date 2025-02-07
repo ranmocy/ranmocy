@@ -1,7 +1,7 @@
+/.build
 *.out
 *.aux
 *.log
-*.pdf
 *.xml
 *.bcf
 *.blg
