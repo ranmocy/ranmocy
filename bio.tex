@@ -1,4 +1,4 @@
-%; /usr/bin/env xelatex -output-directory=.build -halt-on-error $0 && cp .build/*.pdf ./; exit
+%; /usr/bin/env mkdir -p .build && xelatex -output-directory=.build -halt-on-error $0 && cp .build/*.pdf ./; exit
 
 % Add 'print' as an option in the square bracket to remove colors from this template for printing
 \documentclass[]{friggeri-cv}

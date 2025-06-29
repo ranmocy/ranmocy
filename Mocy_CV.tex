@@ -1,4 +1,4 @@
-%; /usr/bin/env xelatex -output-directory=.build -halt-on-error $0 && cp .build/*.pdf ./; exit
+%; /usr/bin/env mkdir -p .build && xelatex -output-directory=.build -halt-on-error $0 && cp .build/*.pdf ./; exit
 
 % Add 'print' as an option in the square bracket to remove colors from this template for printing
 \documentclass[]{friggeri-cv}
@@ -43,9 +43,9 @@
 % PROFESSIONAL SUMMARY SECTION
 % ----------------------------------------------------------------------------------------
 
-Mocy has 10+ years experiences building large-scale systems serving billions.
-Expert in full-stack, mobile, ML, and cloud.
-Proven leader launching products end-to-end with measurable impact.
+% Mocy has 10+ years experiences building large-scale systems serving billions.
+% Expert in full-stack, mobile, ML, and cloud.
+% Proven leader launching products end-to-end with measurable impact.
 
 % ----------------------------------------------------------------------------------------
 % WORK EXPERIENCE SECTION
@@ -62,12 +62,11 @@ Proven leader launching products end-to-end with measurable impact.
     \emph{Apple Vision Pro}
     \begin{itemize}
       \item Attestation service:
-      Developed a cryptography-backed data attestation service in Apple Cloud using Swift full-stack.
-      Implemented end-to-end encryption, and zero-knowledge proofs for privacy-preserving verification.
-      \item Computer Vision ML Model:
-      Developed a ML model using PyTorch to automatically generate optimized 
-      computer vision models for AR/VR applications.
-      Processed 1TB+ training datasets using distributed pipelines.
+      Built a cryptography-backed data attestation service using Swift-based full-stack from iOS to Apple Cloud.
+      Implemented end-to-end encryption and zero-knowledge proofs for privacy-preserving verification.
+      \item Computer Vision Machine Learning Model:
+      Built a computer vision ML model using PyTorch to generate optimized ML models for AR/VR applications.
+      Processed 1TB+ training datasets using distributed Python pipelines.
       Replaced hours of training time with milliseconds of inferencing time.
     \end{itemize}
   }
@@ -77,20 +76,39 @@ Proven leader launching products end-to-end with measurable impact.
   {Palo Alto, CA}
   {
     \emph{Narya.ai} is a no-code platform for testing and securing EVM-based smart contracts,
-    fully supporting the Solidity programming language.
+    built with TypeScript, React, and Next.js, fully supporting Solidity.
 
-    Owned the entire product development, including software, machine learning, product, and UI, and led a team of 5.
-    Launched the product from scratch to production.
+    Owned the entire product development from scratch to production, including software, machine learning, product, and UI.
+
+    Led a team of 5, including full-stack engineers, ML engineers, and designers.
 
     \begin{itemize}
-      \item Developed a proprietary Rust-based fuzzing engine to find smart contract bugs,
-      which are traditionally reviewed manually by smart contract auditors.
-      Our engine runs faster and finds more bugs than popular competitors like Foundry or Echidna.
-      \item LLM-based code generation to quickly create an interaction flow.
-      \item For NFT projects, it can generate a complete set of tests within 10-30 minutes,
-      significantly reducing the time required from days of an engineer's work.
+      \item Built a proprietary fuzzing engine in Rust to find smart contract bugs,
+      which are traditionally reviewed manually by human auditors.
+      Our engine runs faster and finds more bugs than competitors like Foundry or Echidna.
+      \item Implemented code generation using LLM and Python pipeline to create interaction flows with Solidity quickly.
+      \item For NFT projects, the system generates complete test suites within 10-30 minutes,
+      reducing engineering time from days to minutes.
+    \end{itemize}
+
+    \emph{Meson.fi} is a platform that enables users to swap stablecoins across 70+ different chains in minutes rather than hours.
+    We helped them develop and launch the first public version.
+    See https://meson.fi.
+
+    Led a team of 4, including engineers and designers.
+
+    \begin{itemize}
+      \item Web UI:
+      Built a website using React, allowing users to interact with the protocol directly with their crypto wallets,
+      and monitoring their transactions.
+      \item Liquidity Provider Service:
+      Built a high reliability, low latency, non-blocking backend service using TypeScript and Node.js.
+      It monitors on-chain transactions and settles swapping requests.
     \end{itemize}
   }
+  % ------------------------------------------------
+\end{entrylist}
+\begin{entrylist}
   % ------------------------------------------------
   \entry{2015 --- 2022}
   {Google \emph{--- Senior Software Engineer}}
@@ -99,7 +117,7 @@ Proven leader launching products end-to-end with measurable impact.
     \emph{Android Google Play Services} runs on 2B+ Android devices and has 100+ module teams contributing to it.
 
     \begin{itemize}
-      \item Reworked Android components virtualization with code generation.
+      \item Reworked Android components virtualization using Java code generation and annotation processing.
       Reduced maintenance overhead for 100+ module teams by enabling
       latest AndroidX usage with backward compatibility to the container app.
       \item Led and coordinated multiple teams across different PAs to
@@ -108,7 +126,7 @@ Proven leader launching products end-to-end with measurable impact.
 
     \emph{Family Link} provides parental supervision for Google accounts,
     serving millions of actively supervised Android devices.
-    See \url{http://g.co/familylink}.
+    See \url{https://g.co/familylink}.
 
     Led a team of 4 engineers and was responsible for all parental supervision features on millions of kids' Android devices.
 
@@ -118,7 +136,7 @@ Proven leader launching products end-to-end with measurable impact.
       This effort reduced negative user feedback by 90\%.
       % Reliablity
       \item Developed a policy-based framework to improve reliability.
-      Defined all logging and metrics for all major features.
+      Defined and built all logging and metrics for all major features.
       Enabled feature-flag based A/B testing and quick debugging for all feature and APK releases.
       % Release
       \item Defined APK and feature release processes and policies with automated enforcement.
@@ -127,17 +145,14 @@ Proven leader launching products end-to-end with measurable impact.
     \end{itemize}
   }
   % ------------------------------------------------
-\end{entrylist}
-\begin{entrylist}
-  % ------------------------------------------------
   \entry{2014 Summer}
   {Twitter Ads \emph{--- Software Engineer Intern}}
   {San Francisco, CA}
   {
-    Full-stack development with Ruby on Rails and Backbone.js.\@
+    Full-stack development using Ruby on Rails backend and Backbone.js frontend.
     \begin{itemize}
-      \item Tweet Preview: Send promoted tweet previews to advertisers.
-      \item Performance profiling and optimization, improving Campaign Form page load time by 7.03\% at P99.
+      \item Tweet Preview: Built promoted tweet preview feature for advertisers.
+      \item Performance profiling and optimization, improving Campaign Form page load time by 7\% at P99.
     \end{itemize}
   }
   % ------------------------------------------------
@@ -145,15 +160,17 @@ Proven leader launching products end-to-end with measurable impact.
   {GitCafe \emph{--- Full-stack Developer and System Administrator}}
   {Shanghai, China}
   {
-    Full-stack development with Ruby on Rails.
+    Full-stack development using Ruby on Rails.
     \begin{itemize}
       \item Designed and implemented the main Git hosting service, including Git servers, Wiki, Pages,
       Pull Requests, notifications, and account/billing management.
-      \item Designed and implemented metrics system and optimized page loading time.
+      \item Built the metrics system and optimized the page loading time with proper caching strategies.
     \end{itemize}
   }
   % ------------------------------------------------
 \end{entrylist}
+
+\pagebreak
 
 % ----------------------------------------------------------------------------------------
 % TOY SECTION
@@ -168,7 +185,7 @@ Proven leader launching products end-to-end with measurable impact.
   {JavaScript/React}
   {
     An app that helps to organize your life and to make it meaningful.\\
-    Web: \url{https://idid.im}
+    Web: https://idid.im
   }
   % ------------------------------------------------
   \entry{Monkey Tree}
@@ -199,8 +216,7 @@ Proven leader launching products end-to-end with measurable impact.
   {A Caltrain scheduler}
   {JavaScript/Android/iOS}
   {
-    Web: \url{https://github.com/ranmocy/rCaltrain}\\
-    Android: \href{https://play.google.com/store/apps/details?id=me.ranmocy.rcaltrain}{\texttt{market://details?id=me.ranmocy.rcaltrain}}
+    Web: \url{https://github.com/ranmocy/rCaltrain}
   }
   % ------------------------------------------------
   \entry{Guard-Rails}
@@ -228,10 +244,10 @@ Proven leader launching products end-to-end with measurable impact.
   }
   % ------------------------------------------------
   \entry{2009 --- 2013}
-  {Bachelor \textnormal{of Mechanical Design}}
+  {Bachelor \textnormal{of Mechanical Engineering}}
   {Shanghai Jiao Tong University}
   {
-    \emph{Director}, \emph{Drama}, \emph{Crosstalk}, \emph{Movie}
+    Mechanical Design
   }
   % ------------------------------------------------
 \end{entrylist}

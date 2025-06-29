@@ -3,7 +3,7 @@
 git config --local core.hooksPath scripts/
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install basictex imagemagick entr
+    brew install basictex entr imagemagick poppler
     sudo tlmgr update --self
     sudo tlmgr install textpos biblatex
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then

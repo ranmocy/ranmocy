@@ -2,7 +2,7 @@
 
 git config --local core.hooksPath scripts/
 
-file=${1:-CV}
+file=${1:-Mocy_CV}
 echo "Monitoring $file"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
