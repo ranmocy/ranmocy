@@ -60,7 +60,7 @@
 
 \newfontfamily\firstnamefont{Helvetica Neue}
 \newfontfamily\lastnamefont{Helvetica Neue UltraLight}
-\newfontfamily\rolefont{HelveticaNeue Light}
+\newfontfamily\rolefont{Helvetica Neue Light}
 \newfontfamily\headingfont{Fontin Bold}
 
 \setmainfont[Color=textcolor, Numbers=OldStyle]{Times New Roman}

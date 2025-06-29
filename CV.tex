@@ -20,9 +20,7 @@
   A black elf
   with bright eyes
   \section{Contact}
-  Mobile:
   +1 (415) 741--7785
-  ~
   \href{mailto:ranmocy+cv@gmail.com}{ranmocy@gmail.com}
   \href{https://ranmocy.me}{https://ranmocy.me}
   \href{https://www.linkedin.com/in/ranmocy}{ranmocy@linkedin}
@@ -42,6 +40,14 @@
 \end{aside}
 
 % ----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY SECTION
+% ----------------------------------------------------------------------------------------
+
+Mocy has 10+ years experiences building large-scale systems serving billions.
+Expert in full-stack, mobile, ML, and cloud.
+Proven leader launching products end-to-end with measurable impact.
+
+% ----------------------------------------------------------------------------------------
 % WORK EXPERIENCE SECTION
 % ----------------------------------------------------------------------------------------
 
@@ -53,26 +59,36 @@
   {Apple \emph{--- Senior Software Engineer}}
   {Sunnyvale, CA}
   {
-    Apple Vision Pro Services team provides cloud and ML services that support new visionOS features.
+    \emph{Apple Vision Pro}
+    \begin{itemize}
+      \item Attestation service:
+      Developed a cryptography-backed data attestation service in Apple Cloud using Swift full-stack.
+      Implemented end-to-end encryption, and zero-knowledge proofs for privacy-preserving verification.
+      \item Computer Vision ML Model:
+      Developed a ML model using PyTorch to automatically generate optimized 
+      computer vision models for AR/VR applications.
+      Processed 1TB+ training datasets using distributed pipelines.
+      Replaced hours of training time with milliseconds of inferencing time.
+    \end{itemize}
   }
   % ------------------------------------------------
   \entry{2022 --- 2024}
-  {Narya.ai \emph{--- Head of Engineering / Founding Engineer}}
+  {Narya AI \emph{--- Head of Engineering / Founding Engineer}}
   {Palo Alto, CA}
   {
-    Narya AI is a no-code platform for testing and securing EVM-based smart contracts,
+    \emph{Narya.ai} is a no-code platform for testing and securing EVM-based smart contracts,
     fully supporting the Solidity programming language.
 
-    Owned the entire product, including software, machine learning, product, and UI, and led a team of five.
+    Owned the entire product development, including software, machine learning, product, and UI, and led a team of 5.
     Launched the product from scratch to production.
 
     \begin{itemize}
       \item Developed a proprietary Rust-based fuzzing engine to find smart contract bugs,
-      which traditionally is reviewed manually by smart contract auditors.
+      which are traditionally reviewed manually by smart contract auditors.
       Our engine runs faster and finds more bugs than popular competitors like Foundry or Echidna.
-      \item LLM-based code generation to quickly create interaction flow.
+      \item LLM-based code generation to quickly create an interaction flow.
       \item For NFT projects, it can generate a complete set of tests within 10-30 minutes,
-      down from days of engineer's work.
+      significantly reducing the time required from days of an engineer's work.
     \end{itemize}
   }
   % ------------------------------------------------
@@ -80,31 +96,30 @@
   {Google \emph{--- Senior Software Engineer}}
   {Mountain View, CA / Austin, TX}
   {
-    Owner of large-scale projects in Google Play Services,
-    which runs on 2B+ Android devices and has 100+ module teams contributing to it.
+    \emph{Android Google Play Services} runs on 2B+ Android devices and has 100+ module teams contributing to it.
 
     \begin{itemize}
       \item Reworked Android components virtualization with code generation.
-      Reduced long-term maintenance for all 100+ module teams by allowing them to
-      use the latest AndroidX with backward compatibility with the container app.
+      Reduced maintenance overhead for 100+ module teams by enabling
+      latest AndroidX usage with backward compatibility to the container app.
       \item Led and coordinated multiple teams across different PAs to
       safely enable Kotlin for all teams contributing to the app.
     \end{itemize}
 
-    Family Link provides parental supervision for Google accounts,
+    \emph{Family Link} provides parental supervision for Google accounts,
     serving millions of actively supervised Android devices.
     See \url{http://g.co/familylink}.
 
-    Led a team of four and was responsible for all features on kids' Android devices.
+    Led a team of 4 engineers and was responsible for all parental supervision features on millions of kids' Android devices.
 
     \begin{itemize}
       % Complex work
-      \item Reworked the rule-based Time Limit feature, the most critical and complex feature,
-      which reduced 90\% of user complaints.
+      \item Reworked the rule-based Time Limit feature, the most critical and complex feature.
+      This effort reduced negative user feedback by 90\%.
       % Reliablity
       \item Developed a policy-based framework to improve reliability.
-      Defined all logging and metrics,
-      enabling A/B testing and quick debugging for all feature and APK releases.
+      Defined all logging and metrics for all major features.
+      Enabled feature-flag based A/B testing and quick debugging for all feature and APK releases.
       % Release
       \item Defined APK and feature release processes and policies with automated enforcement.
       Maintained compatibility for the app to run on all OS and the container app released in the past 10 years.
@@ -112,14 +127,17 @@
     \end{itemize}
   }
   % ------------------------------------------------
+\end{entrylist}
+\begin{entrylist}
+  % ------------------------------------------------
   \entry{2014 Summer}
   {Twitter Ads \emph{--- Software Engineer Intern}}
   {San Francisco, CA}
   {
-    Full stack with Ruby on Rails and Backbone.js.\@
+    Full-stack development with Ruby on Rails and Backbone.js.\@
     \begin{itemize}
       \item Tweet Preview: Send promoted tweet previews to advertisers.
-      \item Performance profiling and speed up Campaign Form page by 7.03\% in P99.
+      \item Performance profiling and optimization, improving Campaign Form page load time by 7.03\% at P99.
     \end{itemize}
   }
   % ------------------------------------------------
@@ -127,7 +145,7 @@
   {GitCafe \emph{--- Full-stack Developer and System Administrator}}
   {Shanghai, China}
   {
-    Full stack with Ruby on Rails.
+    Full-stack development with Ruby on Rails.
     \begin{itemize}
       \item Designed and implemented the main Git hosting service, including Git servers, Wiki, Pages,
       Pull Requests, notifications, and account/billing management.
